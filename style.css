@@ -3,6 +3,10 @@
     padding: 0;
     font-family: "LXGW WenKai TC Bold", cursive;
 }
+a{
+    text-decoration: none;
+    color: black;
+}
 body{
     background-color: #FBF5F3;
 }
@@ -11,6 +15,8 @@ header{
     height: 76px;
     display: flex;
     background: linear-gradient(to right, #F79BE6, #FFEEFC);
+    position: fixed;
+    z-index: 50;
 }
 nav{
     display: flex;
@@ -35,7 +41,7 @@ nav > .nav > hr{
     display: flex;
     align-items: center;
 }
-.logo > div > p{
+.logo > div > a{
     font-size: 20px;
 }
 .logo > div > div > p{
@@ -45,6 +51,7 @@ nav > .nav > hr{
     display: flex;
     justify-content: end;
 }
+
 button{
     display: none;
     background: none;
@@ -52,13 +59,13 @@ button{
 }
 .section-1{
     width: 100%;
-    height: 1000px;
+    height: 1076px;
     display: flex;
     justify-content: space-between;
-    margin-top: 50px;
+    align-items: end;
 }
 .background-1{
-
+    height: 1000px
 }
 .name{
     width: 100%;
@@ -99,49 +106,164 @@ button{
 }
 .section-2{
     width: 100%;
-    height: 200px;
+    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .background-2{
-    width: 90%;
+    width: 95%;
     height: 154px;
     display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(to right, #F79BE6, #C954A2); 
     border-bottom-left-radius: 30px;
-    border-top-right-radius: 30px;   
+    border-top-right-radius: 30px;  
+    font-size: 30px; 
 }
 .background-2 > div{
     display: flex;
     justify-content: space-between;
-    width: 80%;
+    width: 85%;
 }
 .phone{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 30px;
     width: 320px;
 }
 .email{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 30px;
     width: 370px;
 }
 .location{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 30px;
-    width: 400px;
+    width: 370px;
 }
 .background-2 hr{
     transform: rotate(15deg);
+}
+.section-3{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-2-1{
+    min-height: 1176px;
+    display: flex;
+    align-items: end;
+}
+.background-3{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.map-block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 30px;
+}
+.map{
+    border: 1px solid black;
+}
+.advantages{
+    background: linear-gradient(to right, #F79BE6, #C954A2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55%;
+    height: 390px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.advantages > div{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    height: 50px;
+}
+.advantages p{
+    font-size: 50px;
+    text-align: center;
+}
+.advantages span{
+    font-size: 30px;
+}
+.background-2-1{
+    background-image: url(img/handshake-concept-with-businesswoman_23-2147708511.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 1100px;
+    color: white;
+    text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+    background-position: 0 var(--posY);
+}
+.div-employees{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container-employees{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.text-employees{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+}
+.text-employees > h1{
+    font-size: 50px;
+    height: 70px;
+}
+.text-employees > p{
+    font-size: 20px;
+    width: 850px;
+    text-align: center;
+}
+.employees-container-div{
+    height: 825px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.employees{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 370px;
+}
+.employees > h3{
+    font-size: 30px;
+}
+.employees > p{
+    font-size: 20px;
+    opacity: 70%;
+}
+.container-employees > div{
+    display: flex;
+    justify-content: space-between;
+    width: 45%;
 }
 @media screen and (max-width:430px){
     .nav{
@@ -160,7 +282,14 @@ button{
     .section-1{
         display: flex;
         flex-direction: column;
-        margin-top: 25px;
+        height: 920px;
+    }
+    .background-1{
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: end;
+        height: 920px;
     }
     .name{
         font-size: 25px;
@@ -178,5 +307,66 @@ button{
     }
     .img-name{
         display: none;
+    }
+    .section-2{
+        height: 250px;
+    }
+    .background-2{
+        font-size: 15px;
+        height: 170px;
+    }
+    .background-2 > div {
+        display: flex;
+        flex-direction: column;
+    }
+    .background-2 img{
+        height: 25px;
+    }
+    .background-2 hr{
+        transform: rotate(0deg);
+    }
+    .background-2 > div > div{
+        display: flex;
+        justify-content: start;
+        width: 250px;
+        padding-left: 20%;
+        height: 50px;
+    }
+    .container-employees{
+        display: flex;
+        flex-direction: column;
+    }
+    .section-2-1{
+        background-attachment: fixed;
+        min-height: 1376px;
+    }
+    .text-employees > h1{
+        font-size: 30px;
+        height: 50px;
+    }
+    .text-employees > p{
+        font-size: 14px;
+        width: 85%;
+    }
+    .employees-container-div{
+        justify-content: space-around;
+        height: 550px;
+    }
+    .employees > h3{
+        font-size: 20px;
+        text-align: center;
+    }
+    .employees > p{
+        font-size: 14px;
+        opacity: 70%;
+    }
+    .employees{
+        height: 225px;
+    }
+    .employees > img{
+        height: 150px;
+    }
+    .container-employees > div{
+        width: 100%;
     }
 }
